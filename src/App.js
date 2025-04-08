@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header/Header";
+import First from "./components/Buttons/First/First";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="AppContainer">
+      <Header></Header>
+      <div className="ButtonsGalleryContainer">
+        <div className="ButtonCard" id="first-button">
+          <div className="ButtonCardHeader">
+            <span className="ButtonCardNumber">#1</span>
+          </div>
+          <div className="ButtonsWrapper">
+            <First />
+          </div>
+        </div>
+        <div className="ButtonCard" id="first-button">
+          <div className="ButtonCardHeader">
+            <span className="ButtonCardNumber">#1</span>
+          </div>
+          <div className="ButtonsWrapper">
+            <First />
+          </div>
+        </div>
+        <div className="ButtonCard" id="first-button">
+          <div className="ButtonCardHeader">
+            <span className="ButtonCardNumber">#1</span>
+          </div>
+          <div className="ButtonsWrapper">
+            <First />
+          </div>
+        </div>
+        <div className="ButtonCard" id="first-button">
+          <div className="ButtonCardHeader">
+            <span className="ButtonCardNumber">#1</span>
+          </div>
+          <div className="ButtonsWrapper">
+            <First />
+          </div>
+        </div>
+        <div className="ButtonCard" id="first-button">
+          <div className="ButtonCardHeader">
+            <span className="ButtonCardNumber">#1</span>
+          </div>
+          <div className="ButtonsWrapper">
+            <First />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
