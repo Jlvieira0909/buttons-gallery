@@ -10,9 +10,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #1e1e1e;
+  background: #bf512b;
   width: 100vw;
   height: 100vh;
+}
+
+.LogoContainer {
+  display: flex;
+  margin-bottom: 10vh;
+}
+
+.SzbLogo {
+  width: 20vw;
+  border-radius: 6px;
 }
 
 .ButtonsGalleryContainer {
@@ -25,24 +35,39 @@
 }
 
 .ButtonCard {
-  background: #242626;
+  background: #1e1e1e;
   width: 20vw;
-  height: 12vh;
+  height: 10vh;
   padding: 2%;
   border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  transition: 0.3s;
+}
+
+.ButtonCard:hover {
+  scale: 1.01;
 }
 
 .ButtonCardHeader {
   display: flex;
-  align: flex-start;
-  margin-bottom: 2vw;
+  align-items: flex-start;
 }
 
 .ButtonCardNumber {
-  background: #000000;
-  color: #ffffff;
+  background: #303030;
+  color: #f0f6f7;
   font-weight: 700;
+  font-size: 1vw;
   padding: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vw;
+  height: 5.5vh;
   border-radius: 100%;
 }
 
@@ -51,4 +76,21 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.StylesDisclaimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: #ffffff;
+  margin-top: 4vh;
+  gap: 1em;
+}
+
+.DisclaimerImg {
+}
+
+.DisclaimerText {
+  text-align: center;
 }

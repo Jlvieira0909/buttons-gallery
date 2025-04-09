@@ -15,11 +15,11 @@
   --main-color: #ffffff;
 }
 
-#first-szb-container div.szb-vfr-btns {
+#third-szb-container div.szb-vfr-btns {
   gap: 1em;
 }
 
-#first-szb-container button.vfr__button--clean {
+#third-szb-container button.vfr__button--clean {
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
@@ -27,14 +27,23 @@
   margin: 0;
   height: max-content;
   line-height: normal;
-  outline: none !important;
+  outline: solid 1px #ffffff !important;
+  padding: 12px 16px;
+  background: #303030;
+  transition: 0.3s;
 }
 
-#first-szb-container .vfr__button--clean:hover {
+#third-szb-container .vfr__button--clean:hover {
   text-decoration: none;
+  background: #ffffff;
+  color: #000000;
 }
 
-#first-szb-container button.vfr__button--clean::before {
+#third-szb-container button.vfr__button--clean:hover::before {
+  color: #000000;
+}
+
+#third-szb-container button.vfr__button--clean::before {
   display: flex;
   font-family: "Sizebay";
   font-size: 19px;
@@ -42,26 +51,27 @@
   color: #ffffff;
   align-self: center;
   margin-right: 8px;
+  transition: 0.3s;
 }
 
-#first-szb-container button#szb-vfr-button:before {
+#third-szb-container button#szb-vfr-button:before {
   height: 13px;
   content: "\61";
 }
 
-#first-szb-container button#szb-chart-button:before {
+#third-szb-container button#szb-chart-button:before {
   height: 11px;
   content: "\62";
 }
 
 @media screen and (max-width: 768px) {
-  #first-szb-container {
+  #third-szb-container {
     margin-left: 0px;
   }
 }
 
 @media screen and (max-width: 390px) {
-  #first-szb-container button.vfr__button--clean {
+  #third-szb-container button.vfr__button--clean {
     font-size: 12px;
   }
 }

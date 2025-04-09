@@ -1,8 +1,8 @@
-import "./First.css";
+import "./Third.css";
 
-function First() {
+function Third() {
   return (
-    <div class="vfr__container" id="first-szb-container">
+    <div class="vfr__container" id="third-szb-container">
       <div class="szb-vfr-btns">
         <button id="szb-vfr-button" class="vfr__button--clean">
           Find Your Size
@@ -15,4 +15,4 @@ function First() {
   );
 }
 
-export default First;
+export default Third;

@@ -1,0 +1,24 @@
+:root {
+  --main-font: "FuturaLTPro-Book", "Arial Bold", sans-serif;
+}
+
+#seventh-szb-container {
+  width: 100%;
+}
+
+#seventh-szb-container .vfr__button--clean {
+  outline: none !important;
+  text-decoration: underline;
+  font-family: var(--main-font);
+  color: #f0f6f7;
+}
+
+#seventh-szb-container button#szb-chart-button {
+  text-decoration: underline;
+  color: #f0f6f7;
+}
+
+#seventh-szb-container .div-span > span {
+  color: #f0f6f7;
+  text-decoration: underline;
+}

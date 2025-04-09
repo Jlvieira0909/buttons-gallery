@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("https://static.sizebay.technology/fonts/Roboto.ttf");
+}
+
+:root {
+  --main-font: "Roboto";
+  --main-color: #ffffff;
+  --mainPrimary-color: #ffffff;
+}
+
+/* @font-face {
+  font-family: "untitled-font-3";
+  src: url("../font/stores/fontRuler/fonts/untitled-font-3.woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+#fourth-szb-container .vfr__button--clean:focus {
+  outline: 0 !important;
+}
+
+#fourth-szb-container .vfr__container {
+  width: 100%;
+  margin-top: 5px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fourth-szb-container .szb-vfr-btns {
+  justify-content: left;
+  flex-direction: column;
+  display: flex;
+}
+
+#fourth-szb-container .vfr__button--clean,
+#fourth-szb-container .vfr__button--clean-icon {
+  line-height: normal;
+  font-size: 13px;
+  /* XXX */
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-weight: 500;
+  height: 20px;
+  background: none;
+  border: 0;
+  position: relative;
+}
+
+#fourth-szb-container .vfr__button--clean-icon:hover,
+#fourth-szb-container .vfr__button--clean:hover {
+  text-decoration: none;
+  color: var(--mainPrimary-color);
+}
+
+#fourth-szb-container button#szb-vfr-button:before {
+  position: absolute;
+  top: 1.5em;
+  height: 0;
+  width: 150px;
+  content: "";
+  border-top: 1px solid #ffffff;
+}
+
+#fourth-szb-container button#szb-vfr-button,
+#fourth-szb-container button#szb-chart-button {
+  justify-content: center;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  #fourth-szb-container .vfr__container {
+    margin-left: 0px;
+  }
+
+  #fourth-szb-container .vfr__button--clean,
+  #fourth-szb-container .vfr__button--clean-icon {
+    font-size: 13px;
+  }
+}
