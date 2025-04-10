@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("https://static.sizebay.technology/fonts/Roboto.ttf");
+}
+
 :root {
-  --main-font: "PPRadioGrotesk", Arial, sans-serif;
-  --main-color: #f0f6f7;
+  --main-font: "Roboto";
+  --main-color: #ffffff;
+  --mainPrimary-color: #ffffff;
 }
 
 /* @font-face {
@@ -10,62 +16,68 @@
   font-style: normal;
 } */
 
-#sixth-szb-container button[class^="vfr__button"]:focus {
-  outline: none;
+#sixth-szb-container .vfr__button--clean:focus {
+  outline: 0 !important;
 }
 
-#sixth-szb-container {
+#sixth-szb-container .vfr__container {
   width: 100%;
-  margin-left: 0px;
+  margin-top: 5px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #sixth-szb-container .szb-vfr-btns {
-  gap: 1em;
+  justify-content: left;
+  flex-direction: column;
+  display: flex;
 }
 
 #sixth-szb-container .vfr__button--clean,
 #sixth-szb-container .vfr__button--clean-icon {
   line-height: normal;
-  font-size: 14px;
-  color: var(--main-color);
+  font-size: 13px;
+  /* XXX */
+  color: #ffffff;
   text-decoration: none;
-  text-transform: none;
-  font-family: var(--main-font) !important;
-  font-weight: 400;
-  line-height: 15px;
-  text-decoration: underline;
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-weight: 500;
+  height: 20px;
+  background: none;
+  border: 0;
+  position: relative;
 }
 
 #sixth-szb-container .vfr__button--clean-icon:hover,
 #sixth-szb-container .vfr__button--clean:hover {
-  text-decoration: underline;
-}
-
-#sixth-szb-container button#szb-vfr-button:before,
-#sixth-szb-container button#szb-chart-button:before {
-  display: flex;
-  content: "";
-  margin-right: 6px;
-}
-
-#sixth-szb-container button#szb-chart-button:before {
-  background: url(https://static.sizebay.technology/2399/ruler.svg) center
-    center / 100% 100% no-repeat;
-  height: 24px;
-  width: 24px;
-  /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
-    contrast(100%); */
+  text-decoration: none;
+  color: var(--mainPrimary-color);
 }
 
 #sixth-szb-container button#szb-vfr-button:before {
-  background: url(https://static.sizebay.technology/2399/person.svg) center
-    center / 100% 100% no-repeat;
-  height: 24px;
-  width: 24px;
-  /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
-    contrast(100%); */
+  position: absolute;
+  top: 1.5em;
+  height: 0;
+  width: 150px;
+  content: "";
+  border-top: 1px solid #ffffff;
 }
 
-#sixth-szb-container #szb-vfr-button {
-  margin-right: 0px;
+#sixth-szb-container button#szb-vfr-button,
+#sixth-szb-container button#szb-chart-button {
+  justify-content: center;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  #sixth-szb-container .vfr__container {
+    margin-left: 0px;
+  }
+
+  #sixth-szb-container .vfr__button--clean,
+  #sixth-szb-container .vfr__button--clean-icon {
+    font-size: 13px;
+  }
 }

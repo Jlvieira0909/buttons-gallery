@@ -1,0 +1,12 @@
+.IframeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #bf512b;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4px;
+}

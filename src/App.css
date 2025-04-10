@@ -17,7 +17,7 @@
 
 .LogoContainer {
   display: flex;
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
 }
 
 .SzbLogo {
@@ -93,4 +93,5 @@
 
 .DisclaimerText {
   text-align: center;
+  display: flex;
 }

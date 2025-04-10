@@ -1,8 +1,8 @@
-import "./Eighth.css";
+import "./Ninth.css";
 
-function Eighth() {
+function Ninth() {
   return (
-    <div class="vfr__container" id="eighth-szb-container">
+    <div class="vfr__container" id="ninth-szb-container">
       <div class="szb-vfr-btns">
         <button id="szb-vfr-button" class="vfr__button--clean">
           Find Your Size
@@ -15,4 +15,4 @@ function Eighth() {
   );
 }
 
-export default Eighth;
+export default Ninth;
