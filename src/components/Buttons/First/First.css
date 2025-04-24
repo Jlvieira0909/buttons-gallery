@@ -57,6 +57,16 @@
 @media screen and (max-width: 768px) {
   #first-szb-container {
     margin-left: 0px;
+    width: 100%;
+  }
+
+  #first-szb-container button.vfr__button--clean {
+    justify-content: center;
+  }
+
+  #first-szb-container div.szb-vfr-btns {
+    justify-content: center;
+    align-items: center;
   }
 }
 

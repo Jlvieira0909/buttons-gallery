@@ -68,6 +68,16 @@
 @media screen and (max-width: 768px) {
   #third-szb-container {
     margin-left: 0px;
+    width: 100%;
+  }
+
+  #third-szb-container button.vfr__button--clean {
+    justify-content: center;
+  }
+
+  #third-szb-container div.szb-vfr-btns {
+    justify-content: center;
+    align-items: center;
   }
 }
 

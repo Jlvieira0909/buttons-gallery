@@ -71,3 +71,21 @@
 #fourth-szb-container #szb-vfr-button {
   margin-right: 0px;
 }
+
+@media screen and (max-width: 768px) {
+  #fourth-szb-container {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  #fourth-szb-container .vfr__button--clean {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #fourth-szb-container div.szb-vfr-btns {
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+}

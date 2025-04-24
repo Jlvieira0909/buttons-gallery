@@ -67,6 +67,12 @@
 @media screen and (max-width: 768px) {
   #ninth-szb-container {
     margin-left: 0px;
+    width: 100%;
+  }
+
+  #ninth-szb-container div.szb-vfr-btns {
+    justify-content: center;
+    align-items: center;
   }
 }
 

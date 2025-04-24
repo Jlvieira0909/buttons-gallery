@@ -1,14 +1,14 @@
 import "./Seventh.css";
 
-function Seventh() {
+function Seventh(props) {
   return (
     <div class="vfr__container" id="seventh-szb-container">
       <div class="szb-vfr-btns">
         <button id="szb-vfr-button" class="vfr__button--clean">
-          Find Your Size
+          {props.vfr}
         </button>
         <button id="szb-chart-button" class="vfr__button--clean">
-          Size Chart
+          {props.chart}
         </button>
       </div>
     </div>

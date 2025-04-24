@@ -5,13 +5,13 @@ import "./Iframe.css";
 
 Modal.setAppElement("#root");
 
-export default function FigmaIframe() {
+export default function FigmaIframe(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
       <button className="IframeButton" onClick={() => setIsOpen(true)}>
-        Icons Gallery
+        {props.buttonName}
       </button>
 
       <Modal

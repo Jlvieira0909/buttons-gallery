@@ -28,3 +28,24 @@
   color: #f0f6f7;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+  #seventh-szb-container {
+    margin-left: 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #seventh-szb-container .vfr__button--clean {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #seventh-szb-container div.szb-vfr-btns {
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+}

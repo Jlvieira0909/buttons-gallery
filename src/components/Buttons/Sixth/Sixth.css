@@ -79,5 +79,6 @@
   #sixth-szb-container .vfr__button--clean,
   #sixth-szb-container .vfr__button--clean-icon {
     font-size: 13px;
+    width: 100%;
   }
 }

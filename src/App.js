@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import First from "./components/Buttons/First/First";
@@ -8,13 +9,97 @@ import Fifth from "./components/Buttons/Fifth/Fifth";
 import Sixth from "./components/Buttons/Sixth/Sixth";
 import Seventh from "./components/Buttons/Seventh/Seventh";
 import Eighth from "./components/Buttons/Eighth/Eighth";
-
-import FigmaIframe from "./components/Iframe/Iframe";
 import Ninth from "./components/Buttons/Ninth/Ninth";
 
+import FigmaIframe from "./components/Iframe/Iframe";
+
+import LanguageDropdown from "./components/LanguageDropdown/LanguageDropdown";
+
 function App() {
+  const [language, setLanguage] = useState("en");
+
+  const BUTTONS_TEXT = {
+    en: {
+      vfr: "Find your size",
+      chart: "Size guide",
+      english: "English",
+      italian: "Italian",
+      spanish: "Spanish",
+      french: "French",
+      portuguese: "Portuguese",
+      InfoText:
+        "All of these options can be customized to change the font/color/icon of the elements inside them, also feel free to take a look at our",
+      InfoButton: "Icons Gallery",
+    },
+    it: {
+      vfr: "Trova la tua taglia",
+      chart: "Guida alle taglie",
+      english: "Inglese",
+      italian: "Italiano",
+      spanish: "Spagnolo",
+      french: "Francese",
+      portuguese: "Portoghese",
+      InfoText:
+        " Tutte queste opzioni possono essere personalizzate per cambiare il carattere/colore/icona degli elementi al loro interno, sentiti libero di dare un'occhiata anche al nostro",
+      InfoButton: "Galleria delle icone",
+    },
+    es: {
+      vfr: "Encuentra tu talla",
+      chart: "Guía de tallas",
+      english: "Inglés",
+      italian: "Italiano",
+      spanish: "Español",
+      french: "Francés",
+      portuguese: "Portugués",
+      InfoText:
+        "Todas estas opciones se pueden personalizar para cambiar la fuente/color/icono de los elementos dentro de ellas, también siéntete libre de echar un vistazo a nuestra",
+      InfoButton: "Galería de iconos",
+    },
+    fr: {
+      vfr: "Trouvez votre taille",
+      chart: "Tableau de mesure",
+      english: "Anglais",
+      italian: "Italien",
+      spanish: "Espagnol",
+      french: "Français",
+      portuguese: "Portugais",
+      InfoText:
+        "Toutes ces options peuvent être personnalisées pour modifier la police/couleur/icône des éléments qu'elles contiennent, n'hésitez pas à jeter un œil à notre",
+      InfoButton: "Galerie d'icônes",
+    },
+    br: {
+      vfr: "Encontre seu Tamanho",
+      chart: "Tabela de Medidas",
+      english: "Inglês",
+      italian: "Italiano",
+      spanish: "Espanhol",
+      french: "Francês",
+      portuguese: "Português",
+      InfoText:
+        "Todas essas opções podem ser personalizadas para alterar a fonte/cor/ícone dos elementos dentro delas, sinta-se à vontade para dar uma olhada na nossa",
+      InfoButton: "Galeria de Ícones",
+    },
+  };
+
+  const handleChangeLanguage = (lang) => {
+    setLanguage(lang);
+  };
+
   return (
     <div className="AppContainer">
+      <div className="LanguageSelector">
+        <LanguageDropdown
+          currentLanguage={language}
+          setLanguage={handleChangeLanguage}
+          labels={{
+            en: BUTTONS_TEXT[language].english,
+            it: BUTTONS_TEXT[language].italian,
+            es: BUTTONS_TEXT[language].spanish,
+            fr: BUTTONS_TEXT[language].french,
+            br: BUTTONS_TEXT[language].portuguese,
+          }}
+        />
+      </div>
       <Header></Header>
       <div className="LogoContainer">
         <img className="SzbLogo" src="/SizebayLogo.svg" alt="SizebayLogo" />
@@ -25,7 +110,10 @@ function App() {
             <span className="ButtonCardNumber">#1</span>
           </div>
           <div className="ButtonsWrapper">
-            <First />
+            <First
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
         <div className="ButtonCard" id="first-button">
@@ -33,7 +121,10 @@ function App() {
             <span className="ButtonCardNumber">#2</span>
           </div>
           <div className="ButtonsWrapper">
-            <Second />
+            <Second
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
         <div className="ButtonCard" id="first-button">
@@ -41,7 +132,10 @@ function App() {
             <span className="ButtonCardNumber">#3</span>
           </div>
           <div className="ButtonsWrapper">
-            <Third />
+            <Third
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
         <div className="ButtonCard" id="first-button">
@@ -49,7 +143,10 @@ function App() {
             <span className="ButtonCardNumber">#4</span>
           </div>
           <div className="ButtonsWrapper">
-            <Fourth />
+            <Fourth
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
         <div className="ButtonCard" id="first-button">
@@ -57,7 +154,10 @@ function App() {
             <span className="ButtonCardNumber">#5</span>
           </div>
           <div className="ButtonsWrapper">
-            <Fifth />
+            <Fifth
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
         <div className="ButtonCard" id="first-button">
@@ -65,7 +165,10 @@ function App() {
             <span className="ButtonCardNumber">#6</span>
           </div>
           <div className="ButtonsWrapper">
-            <Sixth />
+            <Sixth
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
         <div className="ButtonCard" id="first-button">
@@ -73,7 +176,10 @@ function App() {
             <span className="ButtonCardNumber">#7</span>
           </div>
           <div className="ButtonsWrapper">
-            <Seventh />
+            <Seventh
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
         <div className="ButtonCard" id="first-button">
@@ -81,7 +187,10 @@ function App() {
             <span className="ButtonCardNumber">#8</span>
           </div>
           <div className="ButtonsWrapper">
-            <Eighth />
+            <Eighth
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
         <div className="ButtonCard" id="first-button">
@@ -89,7 +198,10 @@ function App() {
             <span className="ButtonCardNumber">#9</span>
           </div>
           <div className="ButtonsWrapper">
-            <Ninth />
+            <Ninth
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+            />
           </div>
         </div>
       </div>
@@ -109,9 +221,8 @@ function App() {
           ></path>
         </svg>
         <span className="DisclaimerText">
-          All of these options can be customized to change the font/color/icon
-          of the elements inside them, also feel free to take a look at our
-          <FigmaIframe />
+          {BUTTONS_TEXT[language].InfoText}
+          <FigmaIframe buttonName={BUTTONS_TEXT[language].InfoButton} />
         </span>
       </div>
     </div>
