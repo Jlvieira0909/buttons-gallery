@@ -1,0 +1,109 @@
+.Tenth-vfr__container #szb-vfr-button:hover ~ .tooltipSizebay {
+  display: flex !important;
+}
+
+.Tenth-vfr__container .vfr__button--clean:focus {
+  outline: none !important;
+}
+
+.Tenth-vfr__container {
+  width: 100%;
+}
+
+.Tenth-vfr__container .vfr__button--clean {
+  font-size: 13px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  width: 100%;
+  margin: 0px;
+}
+
+.Tenth-vfr__container #szb-chart-button {
+  width: 90%;
+}
+
+.Tenth-vfr__container #szb-vfr-button:after {
+  background: url(https://static.sizebay.technology/icons/new.svg) center center /
+    100% 100% no-repeat;
+  display: flex;
+  width: 30px;
+  height: 15px;
+  content: "";
+  margin-left: 8px;
+}
+
+.Tenth-vfr__container #szb-vfr-button:before {
+  background: url(https://static.sizebay.technology/5101/icons/vfr.svg) center
+    center / 100% 100% no-repeat;
+  display: flex;
+  width: 20px;
+  height: 15px;
+  content: "";
+  margin-right: 5px;
+}
+
+.Tenth-vfr__container #szb-chart-button:before {
+  background: url(https://static.sizebay.technology/5101/icons/chart.svg) center
+    center / 100% 100% no-repeat;
+  display: flex;
+  width: 22px;
+  height: 20px;
+  content: "";
+  margin-right: 5px;
+}
+
+.Tenth-vfr__container #szb-vfr-button:before,
+.Tenth-vfr__container #szb-chart-button:before {
+  filter: brightness(0) invert(1);
+}
+
+body:has(.vfr__container) #size-guide > button {
+  display: none;
+}
+
+.tooltipSizebay {
+  position: absolute;
+  color: #000000;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  z-index: 9999;
+  font-size: 12px;
+  margin-top: -60px;
+  transition: opacity 0.3s ease;
+  text-align: justify;
+  width: 50%;
+}
+
+.toolTipArrow {
+  display: flex !important;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  position: absolute;
+  top: 95%;
+  left: 30%;
+  transform: rotate(45deg) !important;
+}
+
+.tooltip-close-button {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  padding-right: 4px;
+  font-size: 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+body:has(#szb-vfr-recommendation) .tooltipSizebay {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .tooltipSizebay {
+    width: 240px;
+  }
+}

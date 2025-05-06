@@ -14,6 +14,7 @@ import Ninth from "./components/Buttons/Ninth/Ninth";
 import FigmaIframe from "./components/Iframe/Iframe";
 
 import LanguageDropdown from "./components/LanguageDropdown/LanguageDropdown";
+import Tenth from "./components/Buttons/Tenth/Tenth";
 
 function App() {
   const [language, setLanguage] = useState("en");
@@ -30,6 +31,8 @@ function App() {
       InfoText:
         "All of these options can be customized to change the font/color/icon of the elements inside them, also feel free to take a look at our",
       InfoButton: "Icons Gallery",
+      toolTipText01: "Try our recommendation AI tool",
+      toolTipText02: "to calculate the right size for you",
     },
     it: {
       vfr: "Trova la tua taglia",
@@ -42,6 +45,9 @@ function App() {
       InfoText:
         " Tutte queste opzioni possono essere personalizzate per cambiare il carattere/colore/icona degli elementi al loro interno, sentiti libero di dare un'occhiata anche al nostro",
       InfoButton: "Galleria delle icone",
+      toolTipText01:
+        "Prova il nostro strumento di intelligenza artificiale di raccomandazione",
+      toolTipText02: "per calcolare la taglia giusta per te",
     },
     es: {
       vfr: "Encuentra tu talla",
@@ -54,6 +60,9 @@ function App() {
       InfoText:
         "Todas estas opciones se pueden personalizar para cambiar la fuente/color/icono de los elementos dentro de ellas, también siéntete libre de echar un vistazo a nuestra",
       InfoButton: "Galería de iconos",
+      toolTipText01:
+        "Pruebe nuestra herramienta de recomendación con inteligencia artificial",
+      toolTipText02: "para calcular el tamaño adecuado para usted",
     },
     fr: {
       vfr: "Trouvez votre taille",
@@ -66,6 +75,8 @@ function App() {
       InfoText:
         "Toutes ces options peuvent être personnalisées pour modifier la police/couleur/icône des éléments qu'elles contiennent, n'hésitez pas à jeter un œil à notre",
       InfoButton: "Galerie d'icônes",
+      toolTipText01: "Essayez notre outil de recommandation d'IA",
+      toolTipText02: "pour calculer la bonne taille pour vous",
     },
     br: {
       vfr: "Encontre seu Tamanho",
@@ -78,6 +89,8 @@ function App() {
       InfoText:
         "Todas essas opções podem ser personalizadas para alterar a fonte/cor/ícone dos elementos dentro delas, sinta-se à vontade para dar uma olhada na nossa",
       InfoButton: "Galeria de Ícones",
+      toolTipText01: "Experimente nossa ferramenta de IA de recomendação",
+      toolTipText02: "para calcular o tamanho certo para você",
     },
   };
 
@@ -214,6 +227,19 @@ function App() {
             <Ninth
               vfr={BUTTONS_TEXT[language].vfr}
               chart={BUTTONS_TEXT[language].chart}
+            />
+          </div>
+        </div>
+        <div className="ButtonCard" id="first-button">
+          <div className="ButtonCardHeader">
+            <span className="ButtonCardNumber">#10</span>
+          </div>
+          <div className="ButtonsWrapper">
+            <Tenth
+              vfr={BUTTONS_TEXT[language].vfr}
+              chart={BUTTONS_TEXT[language].chart}
+              toolTipText01={BUTTONS_TEXT[language].toolTipText01}
+              toolTipText02={BUTTONS_TEXT[language].toolTipText02}
             />
           </div>
         </div>
